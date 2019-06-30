@@ -11,3 +11,14 @@ files to ignore and which file types.
 sort.py and testing_csv.py  -- are the main files to look at.
 
 i was going to and still may use a csv instead of a text file
+
+
+file_path_organizer.py
+
+    Reads the text file and  organizes the 
+    paths in the text file  into data structures to be used 
+    in sort.py
+    
+sort.py
+    loops over the number of source folder entries and moves 
+    the files as requested.
