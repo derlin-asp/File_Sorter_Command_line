@@ -6,3 +6,8 @@ completed.
 The program reads from a text file to take in information to know which paths 
 to moves files to and which folders to move files from. It can also know which 
 files to ignore and which file types.
+
+
+sort.py and testing_csv.py  -- are the main files to look at.
+
+i was going to and still may use a csv instead of a text file
