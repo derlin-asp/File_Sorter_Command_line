@@ -1,0 +1,9 @@
+C:\Users\david\Desktop\folder2
+
+destinations
+C:\Users\david\Desktop\folder2\folder_2
+C:\Users\david\Desktop\folder2\folder_one
+
+ignore
+C:\Users\david\Desktop\folder2\IGNORE_THIS_PLEASE
+
