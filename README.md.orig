@@ -11,7 +11,7 @@ files to ignore and which file types.
 sort.py and file_path_organizer.py  -- are the main files to look at.
 
 i was going to and still may use a csv instead of a text file
-
+<<<<<<< HEAD
 
 
 file_path_organizer.py
@@ -23,4 +23,5 @@ file_path_organizer.py
 sort.py
     loops over the number of source folder entries and moves 
     the files as requested.
-
+=======
+>>>>>>> 87519c1608e290ae1472984ed338e8f76a144c31
