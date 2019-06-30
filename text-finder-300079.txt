@@ -1,3 +1,5 @@
+SOURCE
+C:\Users\david\Documents\Sound recordings
 C:\Users\david\Desktop\folder2
 
 destinations

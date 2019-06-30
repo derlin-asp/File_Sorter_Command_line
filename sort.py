@@ -38,7 +38,7 @@ from pathlib import *
 import string
 from contextlib import redirect_stdout
 import io
-
+from file_path_organizer import *
 
 
 
@@ -47,74 +47,64 @@ def prRed(skk):
     print("\033[91m {}\033[00m" .format(skk))
 
 
+temp_list = path_text_file_reader()
+#make it easier to read later
+list_of_source_paths = temp_list[0]
+dict_of_destination_paths = temp_list[1]
+list_of_ignore_paths = temp_list[2]
 
 
-with open('text-finder-300079.txt', 'r') as reader:
-    list_of_paths = reader.read().splitlines()
+for i in range(len(list_of_source_paths)):
+    base_dir = Path(list_of_source_paths[0]) #needs to change when the first one is done
+    files = [e for e in base_dir.iterdir() if e.is_file()]
 
-dict_of_paths = {}
-for i,e in enumerate(list_of_paths):  #proba better way of putting it into a dic in one go
-    dict_of_paths.update({i:e})
-
-
-#def history_save()
-
-
-#with redirect_stdout(f):
-#
-f = io.StringIO()
-#with redirect_stdout(f):
-
-
-
-print(dict_of_paths)
-
-base_dir = Path(list_of_paths[0])
-
-
-files = [e for e in base_dir.iterdir() if e.is_file()]
-print("type skip instead of a number to skip a file")
-index = 0
-#for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
-while(index < len(files)):
-    try:
-        folder_choice = int(input(f"where do you want to move {files[index]}"))
-        if files[index].name == "text-finder-300079.txt":
-            prRed("Skipping text-finder-300079.txt file")
-            index = index + 1
-        elif folder_choice ==  -55:
-            prRed("File Skipped")
-            index = index + 1
-        elif folder_choice == -99:
-            print("EXITING")
-            #exit(99)
-            break
-        elif folder_choice in dict_of_paths: #checking if integer inputed is a key in dict
-            destin = Path(dict_of_paths[folder_choice] + "/" + files[index].name)
-
-            if destin.exists():
-                print(f"FIle exists with name: {files[index].name} in the folder {dict_of_paths[folder_choice]}")
-                print("No change made: moving to next file")
+    print("type -55 instead of a number to skip a file")
+    print(dict_of_destination_paths)
+    index = 0
+    # for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
+    while (index < len(files)):
+        try:
+            folder_choice = int(input(f"where do you want to move {files[index]}"))
+            if files[index].name == "text-finder-300079.txt":
+                prRed("Skipping text-finder-300079.txt file")
                 index = index + 1
-
-            if not destin.exists(): #checks if file exists allready
-                files[index].replace(destin)
+            elif folder_choice == -55:
+                prRed("File Skipped")
                 index = index + 1
-                print("File Moved ")
+            elif folder_choice == -99:
+                print("EXITING")
+                # exit(99)
+                break
+            elif folder_choice in dict_of_destination_paths:  # checking if integer inputed is a key in dict
+                destin = Path(dict_of_destination_paths[folder_choice] + "/" + files[index].name)
 
-        elif folder_choice not in dict_of_paths:
-            print("invalid folder choice: re try")
-            #give them a chance to re choose
-        else:
-            print("Something went wrong, no changes made: retry or exit")
-    except PermissionError:
-        print("Permission Denied: Win Error 5: Skipping file")
-        index = index + 1
-    except ValueError:
-        print("bad input: only integers plz: retrying same file")
-    except NameError:
-        print("The number chosen is not mapped to a folder")
-        print("Retrying same file: no changes made")
+                if destin.exists():
+                    print(f"FIle exists with name: {files[index].name} in the folder {dict_of_destination_paths[folder_choice]}")
+                    print("No change made: moving to next file")
+                    index = index + 1
 
-    # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
-    # print(f'Got stdout: "{f.getvalue()}"')
+                if not destin.exists():  # checks if file exists allready
+                    files[index].replace(destin)
+                    index = index + 1
+                    print("File Moved ")
+
+            elif folder_choice not in dict_of_destination_paths:
+                print("invalid folder choice: re try")
+                # give them a chance to re choose
+            else:
+                print("Something went wrong, no changes made: retry or exit")
+        except PermissionError:
+            print("Permission Denied: Win Error 5: Skipping file")
+            index = index + 1
+        except ValueError:
+            print("bad input: only integers plz: retrying same file")
+        except NameError:
+            print("The number chosen is not mapped to a folder")
+            print("Retrying same file: no changes made")
+
+        # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+        # print(f'Got stdout: "{f.getvalue()}"')
+
+
+
+
