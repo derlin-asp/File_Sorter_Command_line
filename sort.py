@@ -1,38 +1,4 @@
-'''
-TO DOs/
-
-bug for fake fille paths form text file if theres blank lines
-
-more than one source file?  change to a CSV file?
-
-add unzipping options
-
-#user input on next line?
-
-
-find elegant exiting command
-
-
-add support for only adding file names - the file for easier use
-
-print history function
-
-add more error catching
-add help funct -  add manual input so no text file copy pasted
-
-
-make skipping logic take a string instead of an int   if its worth the effort
-
-#catch all thrown errors from imported classes/modules
-
-
-have a feature for using all other folders for destination folders
-
-need an ignore feature
-
-recursivley do entire disc drive - seedbox
-'''
-
+from zipfile import ZipFile
 
 from pathlib import *
 import string
@@ -51,11 +17,11 @@ temp_list = path_text_file_reader()
 #make it easier to read later
 list_of_source_paths = temp_list[0]
 dict_of_destination_paths = temp_list[1]
-list_of_ignore_paths = temp_list[2]
-
+list_of_ignore_files = temp_list[2]
+print(list_of_ignore_files)
 
 for i in range(len(list_of_source_paths)):
-    base_dir = Path(list_of_source_paths[0]) #needs to change when the first one is done
+    base_dir = Path(list_of_source_paths[i]) #needs to change when the first one is done
     files = [e for e in base_dir.iterdir() if e.is_file()]
 
     print("type -55 instead of a number to skip a file")
@@ -64,7 +30,13 @@ for i in range(len(list_of_source_paths)):
     # for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
     while (index < len(files)):
         try:
+
+            if files[index].name in list_of_ignore_files:
+                prRed(f"skipping {files[index].name} as requested ")
+                index = index + 1
+
             folder_choice = int(input(f"where do you want to move {files[index]}"))
+
             if files[index].name == "text-finder-300079.txt":
                 prRed("Skipping text-finder-300079.txt file")
                 index = index + 1
@@ -84,15 +56,20 @@ for i in range(len(list_of_source_paths)):
                     index = index + 1
 
                 if not destin.exists():  # checks if file exists allready
-                    files[index].replace(destin)
-                    index = index + 1
-                    print("File Moved ")
+                    if files[index].suffix == ".zip":
+                        zf = ZipFile(files[index], 'r')
+                        zf.extractall(destin)
+                        zf.close()
+                    else:
+                        files[index].replace(destin)
+                        index = index + 1
+                        print("File Moved ")
 
             elif folder_choice not in dict_of_destination_paths:
                 print("invalid folder choice: re try")
                 # give them a chance to re choose
             else:
-                print("Something went wrong, no changes made: retry or exit")
+                print("Something went wrong, no changes made: retry, skip or exit")
         except PermissionError:
             print("Permission Denied: Win Error 5: Skipping file")
             index = index + 1
@@ -108,3 +85,31 @@ for i in range(len(list_of_source_paths)):
 
 
 
+
+
+print("All files moved")
+'''
+TO DOs/
+add progress bar
+
+add suport for using *.file_type so users dont have to write them all out
+
+add unzipping options
+    delete original zip files?
+
+
+#user input on next line? make 
+
+
+find elegant exiting command/skipping
+
+
+print history function
+
+
+add help funct -  add manual input so no text file copy pasted
+
+
+have a feature for using all other folders for destination folders
+
+'''

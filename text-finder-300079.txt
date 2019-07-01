@@ -1,11 +1,12 @@
 SOURCE
-C:\Users\david\Documents\Sound recordings
-C:\Users\david\Desktop\folder2
+C:\Users\david\Desktop\xxx
+C:\Users\david\Desktop\source2
 
-destinations
-C:\Users\david\Desktop\folder2\folder_2
-C:\Users\david\Desktop\folder2\folder_one
+Destinations
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
 
-ignore
-C:\Users\david\Desktop\folder2\IGNORE_THIS_PLEASE
 
+IGNORE
+ignore.txt

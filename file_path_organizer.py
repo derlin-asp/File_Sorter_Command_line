@@ -27,22 +27,18 @@ def path_text_file_reader():
             folder_flag = "source"
 
 
-        if folder_flag == "source":
-            temp = list_of_paths[line].lower()
-            if temp not in no_no_list:
-               source_path_list.append(list_of_paths[line])
+        if folder_flag == "source" and list_of_paths[line].lower() not in no_no_list:
+            source_path_list.append(list_of_paths[line])
 
-        elif folder_flag == "DESTINATIONS":
-            temp = list_of_paths[line]
-            if temp not in no_no_list:
-                destination_path_dict.update({ destination_count : list_of_paths[line]  })
-                destination_count = destination_count + 1
+        elif folder_flag == "DESTINATIONS" and list_of_paths[line].lower() not in no_no_list:
+           destination_path_dict.update({ destination_count : list_of_paths[line]  })
+           destination_count = destination_count + 1
 
         elif folder_flag == "ignore" and list_of_paths[line].lower() not in no_no_list:
             ignore_path_list.append(list_of_paths[line])
 
         else:
-            print("Issue with flag or blanks")
+            print("Issue with flag or blanks") #printing at end of file always, no affect noticed on accuracy
 
     return [source_path_list, destination_path_dict, ignore_path_list]
 
