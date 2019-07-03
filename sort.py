@@ -18,7 +18,8 @@ temp_list = path_text_file_reader()
 list_of_source_paths = temp_list[0]
 dict_of_destination_paths = temp_list[1]
 list_of_ignore_files = temp_list[2]
-print(list_of_ignore_files)
+list_of_ignore_file_types = temp_list[3]
+print(list_of_ignore_file_types)
 
 for i in range(len(list_of_source_paths)):
     base_dir = Path(list_of_source_paths[i]) #needs to change when the first one is done
@@ -30,22 +31,24 @@ for i in range(len(list_of_source_paths)):
     # for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
     while (index < len(files)):
         try:
+            current_file = files[index]
 
-            if files[index].name in list_of_ignore_files:
-                prRed(f"skipping {files[index].name} as requested ")
+            if files[index].name in list_of_ignore_files or files[index].suffix in list_of_ignore_file_types:
+                print(f"skipping {files[index].name} as requested ")
                 index = index + 1
+                continue
 
             folder_choice = int(input(f"where do you want to move {files[index]}"))
 
             if files[index].name == "text-finder-300079.txt":
-                prRed("Skipping text-finder-300079.txt file")
+                print("Skipping text-finder-300079.txt file")
                 index = index + 1
             elif folder_choice == -55:
-                prRed("File Skipped")
+                print("File Skipped")
                 index = index + 1
             elif folder_choice == -99:
                 print("EXITING")
-                # exit(99)
+                exit(99)
                 break
             elif folder_choice in dict_of_destination_paths:  # checking if integer inputed is a key in dict
                 destin = Path(dict_of_destination_paths[folder_choice] + "/" + files[index].name)
@@ -111,5 +114,9 @@ add help funct -  add manual input so no text file copy pasted
 
 
 have a feature for using all other folders for destination folders
+
+
+an entire drive feature?  duplicate issues?
+
 
 '''

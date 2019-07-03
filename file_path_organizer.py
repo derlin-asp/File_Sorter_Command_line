@@ -1,4 +1,5 @@
 import pprint
+from pathlib import *
 
 def path_text_file_reader():
     '''
@@ -11,7 +12,7 @@ def path_text_file_reader():
     source_path_list = []
     destination_path_dict = {}
     ignore_path_list = []
-
+    ignore_file_type_list = []
 
     no_no_list = ["destinations", "ignore", "source"]
 
@@ -40,7 +41,19 @@ def path_text_file_reader():
         else:
             print("Issue with flag or blanks") #printing at end of file always, no affect noticed on accuracy
 
-    return [source_path_list, destination_path_dict, ignore_path_list]
+
+    for file in ignore_path_list:
+        temp_path = Path(file)
+        if temp_path.stem == "*":
+            ignore_file_type_list.append(temp_path.suffix)
+
+    #print(ignore_file_type_list)
+
+    return [source_path_list, destination_path_dict, ignore_path_list,ignore_file_type_list]
+
+#path_text_file_reader()
+
+
 
 # pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(path_text_file_reader())
