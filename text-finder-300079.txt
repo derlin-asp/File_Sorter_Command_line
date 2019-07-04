@@ -9,7 +9,4 @@ C:\Users\david\Desktop\xxx\folder-r
 
 
 IGNORE
-ignore.txt
-*.File
-*.file
-*.txt
+*.meta

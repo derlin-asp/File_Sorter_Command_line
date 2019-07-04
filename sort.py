@@ -1,13 +1,48 @@
 from zipfile import ZipFile
-
-from pathlib import *
-import string
-from contextlib import redirect_stdout
-import io
 from file_path_organizer import *
 
 
+#def write_to_file_and_print(temp_string):
 
+
+def file_should_be_skipped(current_file):
+    if current_file in list_of_ignore_files or current_file.suffix in list_of_ignore_file_types:
+        temp_string = f"skipping {current_file.name} as requested "
+        return True
+    elif current_file == "text-finder-300079.txt":
+        temp_string2 = "Skipping text-finder-300079.txt file"
+        return True
+    else:
+        return False
+
+
+
+def check_destination_folder_choice_is_exit_or_skip(choice):
+    if choice == -99:
+        temp_string = "EXITING"
+        exit(99)
+    elif choice == -55:
+        temp_string = "File Skipped"
+        return True
+    else:
+        return False
+
+
+def move_or_extract_file(current_file,destin):
+    if destin.exists():
+        temp_string = (f"FIle exists with name: {current_file.name} in the folder {destin}")
+        temp_string2 =("No change made: moving to next file")
+
+    if not destin.exists():
+        if current_file.suffix == ".zip":
+            zf = ZipFile(current_file, 'r')
+            zf.extractall(destin)
+            # check if the file in zip form is there as well
+            zf.close()
+            temp_string = "File Zipped into destination folder"
+        else:
+            current_file.replace(destin)
+            print(f"File Moved to {destin}" )
 
 def prRed(skk):
     print("\033[91m {}\033[00m" .format(skk))
@@ -15,11 +50,13 @@ def prRed(skk):
 
 temp_list = path_text_file_reader()
 #make it easier to read later
+
+
 list_of_source_paths = temp_list[0]
 dict_of_destination_paths = temp_list[1]
 list_of_ignore_files = temp_list[2]
 list_of_ignore_file_types = temp_list[3]
-print(list_of_ignore_file_types)
+
 
 for i in range(len(list_of_source_paths)):
     base_dir = Path(list_of_source_paths[i]) #needs to change when the first one is done
@@ -31,42 +68,23 @@ for i in range(len(list_of_source_paths)):
     # for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
     while (index < len(files)):
         try:
-            current_file = files[index]
 
-            if files[index].name in list_of_ignore_files or files[index].suffix in list_of_ignore_file_types:
-                print(f"skipping {files[index].name} as requested ")
+            if file_should_be_skipped(files[index]):
                 index = index + 1
                 continue
 
-            folder_choice = int(input(f"where do you want to move {files[index]}"))
 
-            if files[index].name == "text-finder-300079.txt":
-                print("Skipping text-finder-300079.txt file")
+            folder_choice = int(input(f"Move: {files[index]}  -> "))
+
+            if check_destination_folder_choice_is_exit_or_skip(folder_choice):
                 index = index + 1
-            elif folder_choice == -55:
-                print("File Skipped")
-                index = index + 1
-            elif folder_choice == -99:
-                print("EXITING")
-                exit(99)
-                break
+                continue
+
             elif folder_choice in dict_of_destination_paths:  # checking if integer inputed is a key in dict
                 destin = Path(dict_of_destination_paths[folder_choice] + "/" + files[index].name)
 
-                if destin.exists():
-                    print(f"FIle exists with name: {files[index].name} in the folder {dict_of_destination_paths[folder_choice]}")
-                    print("No change made: moving to next file")
-                    index = index + 1
-
-                if not destin.exists():  # checks if file exists allready
-                    if files[index].suffix == ".zip":
-                        zf = ZipFile(files[index], 'r')
-                        zf.extractall(destin)
-                        zf.close()
-                    else:
-                        files[index].replace(destin)
-                        index = index + 1
-                        print("File Moved ")
+                move_or_extract_file(files[index],destin)
+                index = index + 1
 
             elif folder_choice not in dict_of_destination_paths:
                 print("invalid folder choice: re try")
@@ -84,6 +102,7 @@ for i in range(len(list_of_source_paths)):
 
         # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         # print(f'Got stdout: "{f.getvalue()}"')
+
 
 
 
