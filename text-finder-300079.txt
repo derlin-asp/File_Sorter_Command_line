@@ -7,6 +7,5 @@ C:\Users\david\Desktop\xxx\folder A
 C:\Users\david\Desktop\xxx\folder K
 C:\Users\david\Desktop\xxx\folder-r
 
-
 IGNORE
 *.meta

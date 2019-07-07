@@ -1,0 +1,26 @@
+type -55 instead of a number to skip a filetype -55 instead of a number to skip a filetype -55 instead of a number to skip a filetype -55 instead of a number to skip a fileC:\Users\david\Desktop\xxx\folder AC:\Users\david\Desktop\xxx\folder KC:\Users\david\Desktop\xxx\folder-rThe file or folder name in the archive(ZIP FILE) exists in the destination folderFIle exists with name: changed but the same as above.zip in the folder C:\Users\david\Desktop\xxx\folder A\changed but the same as above.zipNo change made: moving to next fileFile Zipped into destination folder: C:\Users\david\Desktop\xxx\folder K\gui-inspect-tool-master.ziptype -55 instead of a number to skip a fileC:\Users\david\Desktop\xxx\folder AC:\Users\david\Desktop\xxx\folder KC:\Users\david\Desktop\xxx\folder-rAll files movedtype -55 instead of a number to skip a file
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
+File Zipped into destination folder: C:\Users\david\Desktop\xxx\folder K\changed but the same as above.zip
+File Zipped into destination folder: C:\Users\david\Desktop\xxx\folder-r\gui-inspect-tool-master.zip
+type -55 instead of a number to skip a file
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
+All files moved
+type -55 instead of a number to skip a file
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
+The file or folder name in the archive(ZIP FILE) exists in the destination folder
+FIle exists with name: changed but the same as above.zip in the folder C:\Users\david\Desktop\xxx\folder A\changed but the same as above.zip
+No change made: moving to next file
+The file or folder name in the archive(ZIP FILE) exists in the destination folder
+FIle exists with name: gui-inspect-tool-master.zip in the folder C:\Users\david\Desktop\xxx\folder A\gui-inspect-tool-master.zip
+No change made: moving to next file
+type -55 instead of a number to skip a file
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
+All files moved

@@ -24,3 +24,18 @@ sort.py
     loops over the number of source folder entries and moves 
     the files as requested.
 
+
+
+Takes in Input Text to gather source folders, destination folders and which files to ignore.
+
+SOURCE
+C:\Users\david\Desktop\tester2
+C:\Users\david\Desktop\source2
+
+Destinations
+C:\Users\david\Desktop\xxx\folder A
+C:\Users\david\Desktop\xxx\folder K
+C:\Users\david\Desktop\xxx\folder-r
+
+IGNORE
+*.meta

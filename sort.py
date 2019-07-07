@@ -1,16 +1,29 @@
 from zipfile import ZipFile
 from file_path_organizer import *
 
+#open and append inside the function but truncate and overwirte on each program start
+def write_to_file_and_print(temp_string):
+    print(temp_string)
+    with open('output_of_file_sorter.txt', 'a') as myfile:
+        myfile.write(temp_string)
+        myfile.write('\n')
 
-#def write_to_file_and_print(temp_string):
-
+# Further file processing goes here
 
 def file_should_be_skipped(current_file):
+    '''
+    This function reads the skipping portion of the text file.
+    Auto skips all files and types indicated by the user in the text file.
+    :param current_file:
+    :return: True if files is a skipped one: False if not
+    '''
     if current_file in list_of_ignore_files or current_file.suffix in list_of_ignore_file_types:
         temp_string = f"skipping {current_file.name} as requested "
+        write_to_file_and_print(temp_string)
         return True
     elif current_file == "text-finder-300079.txt":
-        temp_string2 = "Skipping text-finder-300079.txt file"
+        temp_string = "Skipping text-finder-300079.txt file"
+        write_to_file_and_print(temp_string)
         return True
     else:
         return False
@@ -18,54 +31,82 @@ def file_should_be_skipped(current_file):
 
 
 def check_destination_folder_choice_is_exit_or_skip(choice):
+    '''
+    checks if the integer folder choice indicates if user wants to skip a file or exit the program
+    :param choice: an integer from user input
+    :return: True if a file should be skipp. If user input indicates exit then program exits
+    '''
     if choice == -99:
         temp_string = "EXITING"
+        write_to_file_and_print(temp_string)
         exit(99)
     elif choice == -55:
-        temp_string = "File Skipped"
+        temp_string = "File Skipped AS CHOSEN VIA INPUT"
+        write_to_file_and_print(temp_string)
         return True
     else:
         return False
 
 
 def move_or_extract_file(current_file,destin):
+    '''
+    If file choice is a valid folder, then this function is called to either move a file or extract a zip and move it
+
+    Also double checks that the file does not exist in the destination folder before move
+    :param current_file:
+    :param destin:
+    :return: VOID
+    '''
     if destin.exists():
+        if current_file.suffix == ".zip":
+            temp_string = "The file or folder name in the archive(ZIP FILE) exists in the destination folder"
+            write_to_file_and_print(temp_string)
         temp_string = (f"FIle exists with name: {current_file.name} in the folder {destin}")
-        temp_string2 =("No change made: moving to next file")
+        write_to_file_and_print(temp_string)
+        temp_string =("No change made: moving to next file")
+        write_to_file_and_print(temp_string)
 
     if not destin.exists():
-        if current_file.suffix == ".zip":
+        if current_file.suffix == ".zip": #mabye change this to is_zipfile()
             zf = ZipFile(current_file, 'r')
             zf.extractall(destin)
             # check if the file in zip form is there as well
             zf.close()
-            temp_string = "File Zipped into destination folder"
-        else:
+            temp_string = f"File Zipped into destination folder: {destin}"
+            write_to_file_and_print(temp_string)
+        else: #move the file
             current_file.replace(destin)
-            print(f"File Moved to {destin}" )
-
+            temp_string = (f"File Moved to {destin}" )
+            write_to_file_and_print(temp_string)
 def prRed(skk):
     print("\033[91m {}\033[00m" .format(skk))
 
+#open file each program call and overwrite it
+with open('output_of_file_sorter.txt', 'a') as myfile:
+    myfile.write("")
 
 temp_list = path_text_file_reader()
 #make it easier to read later
 
-
+#path_text_file_reader returns a list of four data structures 3 lists and a dict
 list_of_source_paths = temp_list[0]
 dict_of_destination_paths = temp_list[1]
 list_of_ignore_files = temp_list[2]
 list_of_ignore_file_types = temp_list[3]
 
-
+#for loop through all the source paths, then while loop the files of each source path
 for i in range(len(list_of_source_paths)):
     base_dir = Path(list_of_source_paths[i]) #needs to change when the first one is done
     files = [e for e in base_dir.iterdir() if e.is_file()]
 
-    print("type -55 instead of a number to skip a file")
-    print(dict_of_destination_paths)
+    temp_string = ("type -55 instead of a number to skip a file")
+    write_to_file_and_print(temp_string)
+    #temp_string = (dict_of_destination_paths)
+    #write_to_file_and_print(temp_string)
+    for destination in dict_of_destination_paths:
+        write_to_file_and_print(dict_of_destination_paths[destination])
     index = 0
-    # for loop of all source dest and go thorugh them one at a time  - variable for current source/base?
+    # for loop of all source dest and go through them one at a time  - variable for current source/base?
     while (index < len(files)):
         try:
 
@@ -87,19 +128,24 @@ for i in range(len(list_of_source_paths)):
                 index = index + 1
 
             elif folder_choice not in dict_of_destination_paths:
-                print("invalid folder choice: re try")
+                temp_string = ("invalid folder choice: re try")
+                write_to_file_and_print(temp_string)
                 # give them a chance to re choose
             else:
-                print("Something went wrong, no changes made: retry, skip or exit")
+                temp_string =("Something went wrong, no changes made: retry, skip or exit")
+                write_to_file_and_print(temp_string)
         except PermissionError:
-            print("Permission Denied: Win Error 5: Skipping file")
+            temp_string = ("Permission Denied: Win Error 5: Skipping file")
+            write_to_file_and_print(temp_string)
             index = index + 1
         except ValueError:
-            print("bad input: only integers plz: retrying same file")
+            temp_string = ("bad input: only integers plz: retrying same file")
+            write_to_file_and_print(temp_string)
         except NameError:
-            print("The number chosen is not mapped to a folder")
-            print("Retrying same file: no changes made")
-
+            temp_string = ("The number chosen is not mapped to a folder")
+            write_to_file_and_print(temp_string)
+            temp_string = ("Retrying same file: no changes made")
+            write_to_file_and_print(temp_string)
         # print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         # print(f'Got stdout: "{f.getvalue()}"')
 
@@ -107,9 +153,9 @@ for i in range(len(list_of_source_paths)):
 
 
 
+temp_string = ("All files moved")
+write_to_file_and_print(temp_string)
 
-
-print("All files moved")
 '''
 TO DOs/
 add progress bar
