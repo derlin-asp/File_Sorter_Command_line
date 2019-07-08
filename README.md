@@ -28,6 +28,10 @@ sort.py
 
 Takes in Input Text to gather source folders, destination folders and which files to ignore.
 
+Added a Unit Tests folder: 
+
+This contains/will contain unit tests and tests running through the entire program
+
 SOURCE
 C:\Users\david\Desktop\tester2
 C:\Users\david\Desktop\source2
