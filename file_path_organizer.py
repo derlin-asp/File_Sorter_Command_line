@@ -1,11 +1,11 @@
 import pprint
 from pathlib import *
 
-def path_text_file_reader():
+def path_text_file_reader(input_file = "text-finder-300079.txt"):
     '''
     Reads text file and creates a list of paths and files to be used in the program.
     '''
-    with open("text-finder-300079.txt", "r") as f:
+    with open(input_file, "r") as f:
         list_of_paths = [line.strip() for line in f if line.strip()]
 
 

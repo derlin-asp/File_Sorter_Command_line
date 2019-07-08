@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78d963cf-a48b-412d-9a32-4c340199adf7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Unit_Tests/testing_empty_folders.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sort.py" beforeDir="false" afterPath="$PROJECT_DIR$/sort.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text-finder-300079.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text-finder-300079.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_path_organizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/file_path_organizer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +17,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sort.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="117" column="68" lean-forward="true" selection-start-line="117" selection-start-column="68" selection-end-line="117" selection-end-column="68" />
+            <state relative-caret-position="1088">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Unit_Tests/testing_empty_folders.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,7 +55,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="306">
-                <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+                <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
@@ -55,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file_path_organizer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+            <state relative-caret-position="255">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -65,10 +75,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/text-finder-300079.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+            <state relative-caret-position="170">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -103,10 +122,11 @@
         <option value="$PROJECT_DIR$/testing_csv.py" />
         <option value="$PROJECT_DIR$/misc.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/file_path_organizer.py" />
         <option value="$PROJECT_DIR$/text-finder-300079.txt" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/sort.py" />
+        <option value="$PROJECT_DIR$/file_path_organizer.py" />
+        <option value="$PROJECT_DIR$/Unit_Tests/testing_empty_folders.py" />
       </list>
     </option>
   </component>
@@ -122,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,6 +153,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sort">
+  <component name="RunManager" selected="Python tests.Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source">
     <configuration name="misc" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="File_Fixer" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -226,34 +246,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="zetcode" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="File_Fixer" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_Tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zetcode.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="File_Fixer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Unit_Tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source" />
+        <item itemvalue="Python tests.Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders" />
         <item itemvalue="Python.sort" />
         <item itemvalue="Python.misc" />
         <item itemvalue="Python.testing_csv" />
-        <item itemvalue="Python.zetcode" />
       </list>
     </recent_temporary>
   </component>
@@ -282,12 +311,31 @@
       <workItem from="1562127644622" duration="7296000" />
       <workItem from="1562211854497" duration="8633000" />
       <workItem from="1562516723298" duration="6000" />
-      <workItem from="1562516973737" duration="4318000" />
+      <workItem from="1562516973737" duration="7436000" />
+      <workItem from="1562528489726" duration="21000" />
+      <workItem from="1562529675620" duration="17000" />
+      <workItem from="1562529707477" duration="126000" />
+      <workItem from="1562529849317" duration="36000" />
+      <workItem from="1562548516076" duration="3835000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders - 2019.07.07 at 19h 14m 48s.xml">
+      <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders_test_empty_source - 2019.07.07 at 19h 16m 51s.xml">
+      <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders_test_empty_source - 2019.07.07 at 19h 17m 13s.xml">
+      <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders_test_empty_source - 2019.07.07 at 19h 18m 28s.xml">
+      <configuration name="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source" configurationId="tests" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93607000" />
+    <option name="totallyTimeSpent" value="100760000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -302,12 +350,12 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993447" visible="true" weight="0.29317698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4993447" visible="true" weight="0.30916846" />
       <window_info id="Structure" order="1" sideWeight="0.5006553" side_tool="true" weight="0.2867804" />
       <window_info id="Favorites" order="2" sideWeight="0.5006553" side_tool="true" weight="0.2867804" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4978678" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49840087" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -315,8 +363,8 @@
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49946696" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49733475" weight="0.17334779" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49413645" weight="0.17334779" />
       <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.4989339" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -330,8 +378,10 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/File_Fixer$Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders_test_empty_source.coverage" NAME="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders.test_empty_source Coverage Results" MODIFIED="1562552307990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Unit_Tests" />
     <SUITE FILE_PATH="coverage/File_Fixer$testing_csv.coverage" NAME="testing_csv Coverage Results" MODIFIED="1561923619406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/File_Fixer$sort.coverage" NAME="sort Coverage Results" MODIFIED="1562521193513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/File_Fixer$Unittests_for_testing_empty_folders_test_empty_Source_folders_dont_affect_destination_folders.coverage" NAME="Unittests for testing_empty_folders.test_empty_Source_folders_dont_affect_destination_folders Coverage Results" MODIFIED="1562552087764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Unit_Tests" />
     <SUITE FILE_PATH="coverage/File_Fixer$misc.coverage" NAME="misc Coverage Results" MODIFIED="1562130993703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/File_Fixer$zetcode.coverage" NAME="zetcode Coverage Results" MODIFIED="1561446090312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -345,13 +395,6 @@
           <caret line="4941" column="29" selection-start-line="4941" selection-start-column="29" selection-end-line="4941" selection-end-column="46" />
           <caret line="4939" column="29" selection-start-line="4939" selection-start-column="29" selection-end-line="4939" selection-end-column="46" />
           <caret line="4937" column="29" selection-start-line="4937" selection-start-column="29" selection-end-line="4937" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -383,33 +426,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/file_path_organizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md.orig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md.orig" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="306">
-            <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+            <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/text-finder-300079.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="170">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -420,12 +458,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/file_path_organizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sort.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="117" column="68" lean-forward="true" selection-start-line="117" selection-start-column="68" selection-end-line="117" selection-end-column="68" />
+        <state relative-caret-position="1088">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Unit_Tests/testing_empty_folders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
