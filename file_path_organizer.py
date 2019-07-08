@@ -32,9 +32,18 @@ def path_text_file_reader(input_file = "text-finder-300079.txt"):
             source_path_list.append(list_of_paths[line])
 
         elif folder_flag == "DESTINATIONS" and list_of_paths[line].lower() not in no_no_list:
-           destination_path_dict.update({ destination_count : list_of_paths[line]  })
-           destination_count = destination_count + 1
-
+            try:
+               temp_dest_path = Path(list_of_paths[line])
+               if temp_dest_path.is_dir():
+                   destination_path_dict.update({ destination_count : list_of_paths[line]  })
+                   destination_count = destination_count + 1
+               else:#then make the directory
+                    print("Trying to make a new directory.")
+                    temp_dest_path.mkdir(parents=True)
+                    destination_path_dict.update({destination_count: list_of_paths[line]})
+                    destination_count = destination_count + 1
+            except FileExistsError:
+                print("Creating directory failed, double check folder structure")
         elif folder_flag == "ignore" and list_of_paths[line].lower() not in no_no_list:
             ignore_path_list.append(list_of_paths[line])
 
@@ -48,6 +57,11 @@ def path_text_file_reader(input_file = "text-finder-300079.txt"):
             ignore_file_type_list.append(temp_path.suffix)
 
     #print(ignore_file_type_list)
+
+
+
+
+
 
     return [source_path_list, destination_path_dict, ignore_path_list,ignore_file_type_list]
 
