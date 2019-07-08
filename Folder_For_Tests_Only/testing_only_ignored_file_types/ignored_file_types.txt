@@ -1,0 +1,7 @@
+SOURCE
+C:\Users\david\PycharmProjects\File_Fixer\Folder_For_Tests_Only\testing_only_ignored_file_types\Source
+
+Destinations
+C:\Users\david\PycharmProjects\File_Fixer\Folder_For_Tests_Only\testing_only_ignored_file_types\Destination
+IGNORE
+*.txt
