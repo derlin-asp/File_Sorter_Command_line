@@ -38,6 +38,11 @@ Takes in Input Text to gather source folders, destination folders and which file
 
 Added a Unit Tests folder: 
 
-    This contains/will contain unit tests and tests running through the entire program
+    This contains/will contain unit tests and tests 
+    running through the entire program
 
  
+Folder_For_Tests_Only
+
+    This folder contains folders and files to use in test case automation. 
+    Also text files for the inputs.
