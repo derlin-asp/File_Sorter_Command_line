@@ -8,11 +8,6 @@ to moves files to and which folders to move files from. It can also know which
 files to ignore and which file types.
 
 
-sort.py and file_path_organizer.py  -- are the main files to look at.
-
-i was going to and still may use a csv instead of a text file
-
-
 
 file_path_organizer.py
 
@@ -21,25 +16,28 @@ file_path_organizer.py
     in sort.py
     
 sort.py
+
     loops over the number of source folder entries and moves 
     the files as requested.
 
 
-
 Takes in Input Text to gather source folders, destination folders and which files to ignore.
+
+    SOURCE
+    C:\Users\david\Desktop\tester2
+    C:\Users\david\Desktop\source2
+    
+    Destinations
+    C:\Users\david\Desktop\xxx\folder A
+    C:\Users\david\Desktop\xxx\folder K
+    C:\Users\david\Desktop\xxx\folder-r
+    
+    IGNORE
+    *.meta
+
 
 Added a Unit Tests folder: 
 
-This contains/will contain unit tests and tests running through the entire program
+    This contains/will contain unit tests and tests running through the entire program
 
-SOURCE
-C:\Users\david\Desktop\tester2
-C:\Users\david\Desktop\source2
-
-Destinations
-C:\Users\david\Desktop\xxx\folder A
-C:\Users\david\Desktop\xxx\folder K
-C:\Users\david\Desktop\xxx\folder-r
-
-IGNORE
-*.meta
+ 
