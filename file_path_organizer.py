@@ -1,5 +1,7 @@
 import pprint
 from pathlib import *
+from user_error_checking import check_for_path_errors_in_sources
+
 
 def path_text_file_reader(input_file = "text-finder-300079.txt"):
     '''
@@ -28,8 +30,9 @@ def path_text_file_reader(input_file = "text-finder-300079.txt"):
             folder_flag = "source"
 
 
-        if folder_flag == "source" and list_of_paths[line].lower() not in no_no_list:
-            source_path_list.append(list_of_paths[line])
+        if folder_flag == "source" and list_of_paths[line].lower() not in no_no_list\
+            and check_for_path_errors_in_sources(list_of_paths[line]):
+                source_path_list.append(list_of_paths[line])
 
         elif folder_flag == "DESTINATIONS" and list_of_paths[line].lower() not in no_no_list:
             try:
@@ -71,3 +74,5 @@ def path_text_file_reader(input_file = "text-finder-300079.txt"):
 
 # pp = pprint.PrettyPrinter(indent=4)
 # pp.pprint(path_text_file_reader())
+
+

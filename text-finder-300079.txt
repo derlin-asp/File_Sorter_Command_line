@@ -1,11 +1,13 @@
 SOURCE
-C:\Users\david\Desktop\xxx
-C:\Users\david\Desktop\source2
+C:\Users\Dave\Desktop\FIleSOrter\SourceA
+C:\Users\Dave\Desktop\FIleSOrter\SourceB
+C:\Users\Dave\Desktop\FIleSOrter\SourceC
+
 
 Destinations
-C:\Users\david\Desktop\xxx\folder A
-C:\Users\david\Desktop\xxx\folder K
-C:\Users\david\Desktop\xxx\folder-r
+C:\Users\Dave\Desktop\FIleSOrter\FolderA
+C:\Users\Dave\Desktop\FIleSOrter\FolderB
+C:\Users\Dave\Desktop\FIleSOrter\Folderc
 
 IGNORE
 *.meta
